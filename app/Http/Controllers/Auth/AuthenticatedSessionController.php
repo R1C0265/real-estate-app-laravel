@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
 
         //Change logic to reroute different users to different pages for multiuser authentication
 
-        $url = "";
+        $url = '';
         
         if ($request->user()->role === 'admin') {
             $url = 'admin/dashboard';
