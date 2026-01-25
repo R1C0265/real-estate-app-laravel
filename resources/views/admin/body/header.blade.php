@@ -104,7 +104,7 @@
                             </ul>
                         </li>
                         <li class="nav-item d-flex align-items-center">
-                            <a href="{{ asset('../pages/sign-in.html') }}" class="nav-link text-body font-weight-bold px-0">
+                            <a href="{{ route('admin.logout') }}" class="nav-link text-body font-weight-bold px-0">
                                 <i class="material-symbols-rounded">account_circle</i>
                             </a>
                         </li>
