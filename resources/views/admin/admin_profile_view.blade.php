@@ -61,7 +61,8 @@
               <h6 class="mb-0">Update Profile</h6>
             </div>
             <div class="card-body p-3">
-              <form >
+              <form method="POST" action="{{ route('admin.profile.store') }}" class="forms-sample" enctype="multipart/form-data">
+                @csrf
                 <!-- Profile Photo Upload -->
                 <div class="mb-3">
                   <label for="photo" class="form-label fw-bold">Profile Photo</label>
@@ -92,14 +93,14 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="phone" class="form-label fw-bold">Phone</label>
-                    <input type="text" class="form-control border-2 border-dark" id="phone" name="phone" value="{{$profileData->phone}}" readonly style="background-color: #e9ecef;">
+                    <input type="text" class="form-control border-2 border-dark" id="phone" name="phone" value="{{$profileData->phone}}" style="background-color: #e9ecef;">
                   </div>
                 </div>
                 <div class="row">
 
                   <div class="col-md-12 mb-3">
                     <label for="address" class="form-label fw-bold">Address</label>
-                    <input type="text" class="form-control border-2 border-dark" id="address" name="address" value="{{$profileData->address}}" readonly style="background-color: #e9ecef;">
+                    <input type="text" class="form-control border-2 border-dark" id="address" name="address" value="{{$profileData->address}}" style="background-color: #e9ecef;">
                   </div>
                 </div>
 
@@ -129,15 +130,15 @@
 </div>
 
 <script type="text/javascript">
-$(document).ready(function(){
-  $('#image').change(function(e){
-    var reader = new FileReader();
-    reader.onload = function(e){
-      $('#showImage').attr('src',e.target.result);
-    }
-    reader.readAsDataURL(e.target.files['0']);
+  $(document).ready(function() {
+    $('#image').change(function(e) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $('#showImage').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(e.target.files['0']);
+    });
   });
-});
 </script>
 
 @endSection
