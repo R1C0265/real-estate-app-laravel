@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 
 class AdminController extends Controller
@@ -21,7 +22,10 @@ class AdminController extends Controller
     }
      public function AdminProfile()
     {
-        return view('admin.admin_profile');
+        //Accessing User table ID field 
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+        return view('admin.admin_profile_view', compact('profileData'));
     }
 
 
