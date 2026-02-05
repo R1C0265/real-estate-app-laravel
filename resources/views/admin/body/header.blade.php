@@ -9,16 +9,11 @@
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                        <div class="input-group input-group-outline">
-                            <label class="form-label">Type here...</label>
-                            <input type="text" class="form-control">
-                        </div>
+                        
                     </div>
                     <ul class="navbar-nav d-flex align-items-center  justify-content-end">
 
-                        <li class="mt-1">
-                            <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
-                        </li>
+                        
                         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
@@ -101,10 +96,30 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item d-flex align-items-center">
-                            <a href="{{ route('admin.logout') }}" class="nav-link text-body font-weight-bold px-0">
+                        <li class="nav-item dropdown d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body font-weight-bold px-0" id="dropdownMenuProfile" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="material-symbols-rounded">account_circle</i>
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuProfile">
+                                <li>
+                                    <a class="dropdown-item border-radius-md d-flex align-items-center" href="{{ route('admin.logout') }}">
+                                        <i class="material-symbols-rounded me-2">logout</i>
+                                        <span>Sign Out</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item border-radius-md d-flex align-items-center" href="{{ route('admin.profile') }}">
+                                        <i class="material-symbols-rounded me-2">person</i>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item border-radius-md d-flex align-items-center" href="{{ route('admin.adminChangePassword') }}">
+                                        <i class="material-symbols-rounded me-2">lock</i>
+                                        <span>Change Password</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

@@ -108,7 +108,7 @@
                                         <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submi t" class="btn bg-gradient-dark w-100 my-4 mb-2">Log In</button>
+                                        <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Log In</button>
                                     </div>
                                    
                                 </form>

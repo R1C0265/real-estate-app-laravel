@@ -28,14 +28,14 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
         $request->session()->regenerate();
 
-        //Change logic to reroute different users to different pages for multiuser authentication
+        //Changed logic to reroute different users to different pages for multiuser authentication
 
         $url = '';
         
         if ($request->user()->role === 'admin') {
             $url = 'admin/dashboard';
         } else if ($request->user()->role === 'agent') {
-            $url = 'agent/dashboard';
+            $url = 'agent/dashboard'; 
         } else if ($request->user()->role === 'user') {
             $url = '/dashboard';
         }
